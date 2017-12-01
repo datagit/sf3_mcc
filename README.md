@@ -11,3 +11,6 @@ A Symfony project created on November 29, 2017, 11:47 pm.
     The Entity shortcut name: MccDataSourceBundle:Product
 3. install $composer require doctrine/doctrine-migrations-bundle "^1.0"
     https://symfony.com/doc/master/bundles/DoctrineMigrationsBundle/index.html
+4. install $composer require --dev doctrine/doctrine-fixtures-bundle
+    https://symfony.com/doc/master/bundles/DoctrineFixturesBundle/index.html
+    doctrine:fixtures:load
