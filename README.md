@@ -7,4 +7,6 @@ A Symfony project created on November 29, 2017, 11:47 pm.
     update composer.json
     $composer dump-autoload
     guide: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html
+2. $php bin/console doctrine:generate:entity
+    The Entity shortcut name: MccDataSourceBundle:Product
 
