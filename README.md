@@ -14,3 +14,7 @@ A Symfony project created on November 29, 2017, 11:47 pm.
 4. install $composer require --dev doctrine/doctrine-fixtures-bundle
     https://symfony.com/doc/master/bundles/DoctrineFixturesBundle/index.html
     doctrine:fixtures:load
+5. install $composer require davidbadura/faker-bundle
+    https://github.com/DavidBadura/FakerBundle
+        https://github.com/fzaninotto/Faker
+            https://stackoverflow.com/questions/3191664/list-of-all-locales-and-their-short-codes

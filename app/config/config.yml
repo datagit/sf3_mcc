@@ -76,3 +76,6 @@ doctrine_migrations:
     table_name: migration_versions
     name: Application Migrations
     organize_migrations: false # Version >=1.2 Possible values are: "BY_YEAR", "BY_YEAR_AND_MONTH", false
+
+david_badura_faker:
+  locale: ja_JP #default: en_EN
