@@ -18,3 +18,6 @@ A Symfony project created on November 29, 2017, 11:47 pm.
     https://github.com/DavidBadura/FakerBundle
         https://github.com/fzaninotto/Faker
             https://stackoverflow.com/questions/3191664/list-of-all-locales-and-their-short-codes
+6. install $composer require friendsofsymfony/user-bundle "~2.0"
+    https://symfony.com/doc/master/bundles/FOSUserBundle/index.html
+    
