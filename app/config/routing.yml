@@ -6,6 +6,12 @@ mcc_data_source:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+# EasyAdminBundle
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
