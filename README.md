@@ -24,4 +24,7 @@ A Symfony project created on November 29, 2017, 11:47 pm.
     https://symfony.com/doc/master/bundles/EasyAdminBundle/book/installation.html
     $composer clear-cache
     $php bin/console assets:install public --symlink
-    
+8. generate $php bin/console generate:bundle
+        Mcc\BackendBundle
+        update composer.json
+        $composer dump-autoload

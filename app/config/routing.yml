@@ -1,3 +1,8 @@
+mcc_backend:
+    resource: "@MccBackendBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 mcc_data_source:
     resource: "@MccDataSourceBundle/Controller/"
     type:     annotation
