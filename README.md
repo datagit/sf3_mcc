@@ -28,3 +28,5 @@ A Symfony project created on November 29, 2017, 11:47 pm.
         Mcc\BackendBundle
         update composer.json
         $composer dump-autoload
+9. Update schema tables
+        php bin/console doctrine:schema:update --force

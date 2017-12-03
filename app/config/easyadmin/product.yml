@@ -8,4 +8,5 @@ easy_admin:
                     - { property: 'name'}
                     - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
                     - { property: 'description'}
+                    - { property: 'enabled'}
             # ...

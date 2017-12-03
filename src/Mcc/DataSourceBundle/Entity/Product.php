@@ -42,6 +42,13 @@ class Product
      */
     private $description;
 
+    /**
+     * Indicate if the product is enabled (available in store).
+     *
+     * @var bool
+     * @ORM\Column(name="enabled", type="boolean", options={"default":1, "comment":"1 enabled, 0 disabled"})
+     */
+    protected $enabled = false;
 
     /**
      * Get id
@@ -152,6 +159,23 @@ class Product
     {
         return $this->name;
     }
+
+    /**
+     * @return bool
+     */
+    public function isEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * @param bool $enabled
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+    }
+
 
 
 }
