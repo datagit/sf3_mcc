@@ -1,0 +1,35 @@
+#sdocument: https://github.com/javiereguiluz/EasyAdminBundle
+# EasyAdminBundle
+easy_admin:
+    site_name: ABC BACKEND
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'Y-m-d H:i:s'
+    entities:
+        - Mcc\DataSourceBundle\Entity\Product
+        - Mcc\DataSourceBundle\Entity\Category
+        #- Mcc\DataSourceBundle\Entity\User
+#        User:
+#            class: Mcc\DataSourceBundle\Entity\User
+#            edit:
+#                fields:
+#                    # ...
+#                    - { property: 'plainPassword', type_options: { required: false} }
+#                    # ...
+#                form_options: { validation_groups: ['Profile'] }
+#                new:
+#                    fields:
+#                        # ...
+#                        - { property: 'plainPassword', type_options: { required: true} }
+#                        # ...
+#                    form_options: { validation_groups: ['Registration'] }
+#            form:
+#                fields:
+#                    - username
+#                    - email
+#                    - enabled
+#                    - lastLogin
+#                    # if administrators are allowed to edit users' passwords and roles, add this:
+#                    - { property: 'plainPassword', type: 'text', type_options: { required: false } }
+#                    - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'ROLE_USER': 'ROLE_USER', 'ROLE_ADMIN': 'ROLE_ADMIN' } } }
