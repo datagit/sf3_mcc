@@ -1,15 +1,5 @@
-#sdocument: https://github.com/javiereguiluz/EasyAdminBundle
-# EasyAdminBundle
 easy_admin:
-    site_name: ABC BACKEND
-    formats:
-        date:     'd/m/Y'
-        time:     'H:i'
-        datetime: 'Y-m-d H:i:s'
-    entities:
-        - Mcc\DataSourceBundle\Entity\Product
-        - Mcc\DataSourceBundle\Entity\Category
-        #- Mcc\DataSourceBundle\Entity\User
+#    entities:
 #        User:
 #            class: Mcc\DataSourceBundle\Entity\User
 #            edit:

@@ -1,0 +1,11 @@
+easy_admin:
+    entities:
+        Product:
+            class: Mcc\DataSourceBundle\Entity\Product
+            form:
+                fields:
+                    - { property: 'category', type: 'easyadmin_autocomplete', type_options: { class: 'Mcc\DataSourceBundle\Entity\Category' } }
+                    - { property: 'name'}
+                    - { property: 'price'}
+                    - { property: 'description'}
+            # ...

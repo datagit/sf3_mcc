@@ -124,5 +124,35 @@ class Product
     {
         return $this->description;
     }
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="products")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     */
+    private $category;
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param Category $category
+     */
+    public function setCategory(Category $category = null)
+    {
+        $this->category = $category;
+    }
+
+    /** {@inheritdoc} */
+    public function __toString()
+    {
+        return $this->name;
+    }
+
+
 }
 
