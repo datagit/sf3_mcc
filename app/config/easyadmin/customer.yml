@@ -1,0 +1,12 @@
+easy_admin:
+    entities:
+        Customer:
+            #disabled_actions: ['delete', 'edit', 'restock']
+            class: Mcc\DataSourceBundle\Entity\Customer
+            form:
+                fields:
+                    - { property: 'name' }
+                    - { property: 'phoneNumber' }
+                    - { property: 'email' }
+                    - { property: 'interests', , type: 'choice', type_options: { expanded: true, multiple: true, choices: { 'a': 'A1', 'b': 'B1' } } }
+                    #- { property: 'salesman', type: 'choice', type_options: { multiple: true, choices: 'Mcc\DataSourceBundle\Entity\Category' } }

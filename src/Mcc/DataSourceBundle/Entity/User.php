@@ -39,5 +39,11 @@ class User extends BaseUser
     {
         return $this->id;
     }
+
+    /** {@inheritdoc} */
+    public function __toString()
+    {
+        return sprintf('%d-%s', $this->getId(), $this->getEmail());
+    }
 }
 
