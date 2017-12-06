@@ -2,8 +2,12 @@
 
 namespace Mcc\DataSourceBundle\Controller;
 
+use Mcc\BackendBundle\Form\Type\CustomerType;
+use Mcc\DataSourceBundle\Entity\Customer;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class DefaultController extends Controller
 {
@@ -36,6 +40,19 @@ class DefaultController extends Controller
         // Aut molestias et maxime. Fugit autem facilis quos vero. Eius quibusdam possimus est.
         // Ea quaerat et quisquam. Deleniti sunt quam. Adipisci consequatur id in occaecati.
         // Et sint et. Ut ducimus quod nemo ab voluptatum.
-        return $this->render('MccDataSourceBundle:Default:index.html.twig');
+
+
+        // create a task and give it some dummy data for this example
+        $task = new Customer();
+
+        $form = $this->createFormBuilder($task)
+            ->add('email', TextType::class)
+            ->add('salesman', CustomerType::class)
+            ->add('save', SubmitType::class, array('label' => 'Create Task'))
+            ->getForm();
+
+        return $this->render('MccDataSourceBundle:Default:index.html.twig', array(
+            'form' => $form->createView(),
+        ));
     }
 }

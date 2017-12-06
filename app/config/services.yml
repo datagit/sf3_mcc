@@ -33,3 +33,6 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    Mcc\DemoBundle\Form\Type\CustomerType:
+        #arguments: ['@doctrine.orm.entity_manager']
+        tags: [form.type]

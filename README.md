@@ -4,6 +4,7 @@ sf3_mycc
 A Symfony project created on November 29, 2017, 11:47 pm.
 
 1. $php bin/console generate:bundle
+    Mcc\DataSourceBundle
     update composer.json
     $composer dump-autoload
     guide: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html
@@ -30,3 +31,7 @@ A Symfony project created on November 29, 2017, 11:47 pm.
         $composer dump-autoload
 9. Update schema tables
         php bin/console doctrine:schema:update --force
+10. $php bin/console generate:bundle
+        Mcc\DemoBundle
+        update composer.json
+        $composer dump-autoload

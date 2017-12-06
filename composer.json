@@ -6,6 +6,7 @@
         "psr-4": {
             "AppBundle\\": "src/AppBundle",
             "Mcc\\BackendBundle\\": "src/Mcc/BackendBundle",
+            "Mcc\\DemoBundle\\": "src/Mcc/DemoBundle",
             "Mcc\\DataSourceBundle\\": "src/Mcc/DataSourceBundle"
         },
         "classmap": [
