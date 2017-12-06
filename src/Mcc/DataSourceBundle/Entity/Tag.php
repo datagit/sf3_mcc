@@ -145,6 +145,10 @@ class Tag
         return $this;
     }
 
+    public function isExistsCommand(Command $command) {
+        return $this->commands->contains($command);
+    }
+
 
 
 }

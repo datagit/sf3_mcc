@@ -32,18 +32,23 @@ class AdminController extends BaseAdminController
     }
 
     //-------------
-    public function preUpdateCommandEntity($entity)
+    public function preUpdateCommandEntity($command)
     {
 //        foreach ($entity->getTags() as $tag) {
 //            $entity->removeTag($tag);
 //        }
+        // TODO >> need update code
+        foreach ($command->getTags() as $tag)
+            if ($tag->isExistsCommand($command)) {
+                $tag->removeCommand($command);
+            } else {
+                $tag->addCommand($command);
+            }
 
-        foreach ($entity->getTags() as $tag) {
-            $tag->addCommand($entity);
-        }
 
-        if (method_exists($entity, 'setUpdatedAt')) {
-            $entity->setUpdatedAt(new \DateTime());
+
+        if (method_exists($command, 'setUpdatedAt')) {
+            $command->setUpdatedAt(new \DateTime());
         }
     }
     //-------------
