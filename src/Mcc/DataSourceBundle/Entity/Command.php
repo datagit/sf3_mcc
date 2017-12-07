@@ -127,9 +127,11 @@ class Command
     }
 
     /**
-     * @var Tag[]
-     * @ORM\ManyToMany(targetEntity="Tag", mappedBy="commands", cascade={"persist"})
-     * @ORM\JoinColumn(name="tag_id", referencedColumnName="id")
+     * @ORM\ManyToMany(targetEntity="Tag")
+     * @ORM\JoinTable(name="commands_tags",
+     *      joinColumns={@ORM\JoinColumn(name="command_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="tag_id", referencedColumnName="id")}
+     *      )
      */
     private $tags;
 
@@ -161,27 +163,6 @@ class Command
     public function __construct()
     {
         $this->tags = new ArrayCollection();
-    }
-
-    /**
-     * @param Tag $post
-     * @return Category
-     */
-    public function addTag(Tag $tag)
-    {
-        $this->tags[] = $tag;
-        if (!$tag->getCommands()->contains($this)) {
-              $tag->addCommand($this);
-          }
-        return $this;
-    }
-
-    public function removeTag(Tag $tag) {
-        if ($this->tags->contains($tag)) {
-            $this->tags->removeElement($tag);
-            $tag->removeCommand($this);
-        }
-        return $this;
     }
 
 }

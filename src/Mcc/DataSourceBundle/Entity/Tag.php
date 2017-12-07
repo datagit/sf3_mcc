@@ -94,62 +94,11 @@ class Tag
         return $this->createdAt;
     }
 
-    /**
-     * @var Command[]
-     * @ORM\ManyToMany(targetEntity="Command", inversedBy="tags", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(name="command_id", referencedColumnName="id")
-     */
-    private $commands;
-
-    /**
-     * @return Command[]
-     */
-    public function getCommands()
-    {
-        return $this->commands;
-    }
-
-    /**
-     * @param Command[] $commands
-     */
-    public function setCommands($commands)
-    {
-        $this->commands = $commands;
-    }
-
     /** {@inheritdoc} */
     public function __toString()
     {
         return $this->name;
     }
-
-    /**
-     * @param Command $command
-     * @return Tag
-     */
-    public function addCommand(Command $command)
-    {
-        $this->commands[] = $command;
-        if (!$command->getTags()->contains($this)) {
-            $command->addTag($this);
-        }
-        return $this;
-    }
-
-    public function removeCommand(Command $command) {
-        if ($this->commands->contains($command)) {
-            $this->commands->removeElement($command);
-            $command->removeTag($this);
-        }
-
-        return $this;
-    }
-
-    public function isExistsCommand(Command $command) {
-        return $this->commands->contains($command);
-    }
-
-
 
 }
 

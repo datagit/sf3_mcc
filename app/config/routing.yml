@@ -1,8 +1,3 @@
-mcc_demo:
-    resource: "@MccDemoBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 #mcc_backend:
 #    resource: "@MccBackendBundle/Controller/"
 #    type:     annotation

@@ -5,3 +5,5 @@
     update route: app/config/routing.yml
     AdminController extends BaseAdminController
     preUpdateCommandEntity($entity)
+4. Examples of more complex many-to-many relations #846: 
+   https://github.com/javiereguiluz/EasyAdminBundle/issues/1683 

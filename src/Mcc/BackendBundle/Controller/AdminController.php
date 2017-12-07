@@ -31,33 +31,11 @@ class AdminController extends BaseAdminController
         $this->get('fos_user.user_manager')->updateUser($user, false);
     }
 
-    //-------------
-    public function preUpdateCommandEntity($command)
+
+    public function preUpdateEntity($command)
     {
-//        foreach ($entity->getTags() as $tag) {
-//            $entity->removeTag($tag);
-//        }
-        // TODO >> need update code
-        foreach ($command->getTags() as $tag)
-            if ($tag->isExistsCommand($command)) {
-                $tag->removeCommand($command);
-            } else {
-                $tag->addCommand($command);
-            }
-
-
-
         if (method_exists($command, 'setUpdatedAt')) {
             $command->setUpdatedAt(new \DateTime());
         }
     }
-    //-------------
-
-//    /**
-//     * @Route("/")
-//     */
-//    public function indexAction()
-//    {
-//        return $this->render('MccBackendBundle:Default:index.html.twig');
-//    }
 }

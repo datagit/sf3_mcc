@@ -41,18 +41,6 @@ class DefaultController extends Controller
         // Ea quaerat et quisquam. Deleniti sunt quam. Adipisci consequatur id in occaecati.
         // Et sint et. Ut ducimus quod nemo ab voluptatum.
 
-
-        // create a task and give it some dummy data for this example
-        $task = new Customer();
-
-        $form = $this->createFormBuilder($task)
-            ->add('email', TextType::class)
-            ->add('salesman', CustomerType::class)
-            ->add('save', SubmitType::class, array('label' => 'Create Task'))
-            ->getForm();
-
-        return $this->render('MccDataSourceBundle:Default:index.html.twig', array(
-            'form' => $form->createView(),
-        ));
+        return $this->render('MccDataSourceBundle:Default:index.html.twig');
     }
 }
