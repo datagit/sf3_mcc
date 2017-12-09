@@ -9,3 +9,5 @@
    https://github.com/javiereguiluz/EasyAdminBundle/issues/1683
 5. install VichUploaderBundle
     https://symfony.com/doc/current/bundles/EasyAdminBundle/integration/vichuploaderbundle.html
+    https://github.com/dustin10/VichUploaderBundle/blob/master/Resources/doc/index.md
+    https://github.com/dustin10/VichUploaderBundle/blob/master/Resources/doc/usage.md

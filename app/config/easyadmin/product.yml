@@ -9,7 +9,7 @@ easy_admin:
                     - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
                     - { property: 'description'}
                     - { property: 'enabled'}
-                    - { property: 'imageFile', type: 'file' }
+                    - { property: 'imageFile', type: 'vich_file' }
             # ...
             list:
                 fields:
@@ -19,11 +19,5 @@ easy_admin:
                     - { property: 'description'}
                     - { property: 'enabled'}
                     - { property: 'image', type: 'image', base_path: '%app.path.product_images%', template: 'vich_uploader_image.html.twig' }
-            show:
-                fields:
-                    - { property: 'category'}
-                    - { property: 'name'}
-                    - { property: 'price' }
-                    - { property: 'description'}
-                    - { property: 'enabled'}
-                    - { property: 'image', type: 'image', base_path: '%app.path.product_images%', template: 'vich_uploader_image.html.twig' }
+                    #- { property: 'image', type: 'vich_file', base_path: '%app.path.product_images%' }
+                    #- { property: 'image', type: 'file', base_path: '%app.path.product_images%' }
