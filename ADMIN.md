@@ -15,4 +15,7 @@
     https://symfony.com/doc/current/bundles/EasyAdminBundle/integration/ivoryckeditorbundle.html
     php bin/console ckeditor:install
     php bin/console assets:install --symlink
+7. list icon for web application
+    https://www.w3schools.com/icons/fontawesome_icons_webapp.asp
+    https://w3layouts.com/admin-templates/
     

@@ -1,4 +1,10 @@
 easy_admin:
     design:
         form_theme:   ['VichUploaderBundle:Form:fields.html.twig', 'horizontal']
+        menu:
+            - { entity: 'User', icon: 'user' }
+            - { entity: 'Category', icon: 'tag' }
+            - { entity: 'Product', icon: 'recycle' }
+            - { entity: 'Tag', icon: 'tag' }
+            - { entity: 'Command', icon: 'gears' }
         # ...
