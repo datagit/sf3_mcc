@@ -1,3 +1,4 @@
 easy_admin:
     design:
+        #form_theme:   ['VichUploaderBundle:Form:fields.html.twig', 'horizontal']
         # ...

@@ -6,4 +6,6 @@
     AdminController extends BaseAdminController
     preUpdateCommandEntity($entity)
 4. Examples of more complex many-to-many relations #846: 
-   https://github.com/javiereguiluz/EasyAdminBundle/issues/1683 
+   https://github.com/javiereguiluz/EasyAdminBundle/issues/1683
+5. install VichUploaderBundle
+    https://symfony.com/doc/current/bundles/EasyAdminBundle/integration/vichuploaderbundle.html
