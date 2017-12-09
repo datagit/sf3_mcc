@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Mcc\BackendBundle\MccBackendBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

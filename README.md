@@ -35,3 +35,11 @@ A Symfony project created on November 29, 2017, 11:47 pm.
         Mcc\DemoBundle
         update composer.json
         $composer dump-autoload
+11. install StofDoctrineExtensionsBundle
+    $composer require stof/doctrine-extensions-bundle
+    https://symfony.com/doc/master/bundles/StofDoctrineExtensionsBundle/index.html
+    https://github.com/Atlantic18/DoctrineExtensions/tree/master/doc/
+    https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/blameable.md
+    https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/sluggable.md
+    https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/symfony2.md
+    php bin/console  doctrine:mapping:info

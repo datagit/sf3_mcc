@@ -5,6 +5,7 @@ namespace Mcc\DataSourceBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Product
@@ -66,10 +67,16 @@ class Product
     private $imageFile;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      * @var \DateTime
      */
     private $updatedAt;
+
+    /**
+     * @Gedmo\Slug(fields={"name", "price"}, updatable=true, separator="-")
+     * @ORM\Column(length=128, nullable=true, unique=true)
+     */
+    private $slug;
 
     /**
      * Get id
@@ -224,6 +231,20 @@ class Product
     {
         return $this->image;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
 
 
 

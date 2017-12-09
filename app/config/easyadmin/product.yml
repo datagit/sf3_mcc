@@ -15,6 +15,7 @@ easy_admin:
                 fields:
                     - { property: 'category'}
                     - { property: 'name'}
+                    - { property: 'slug'}
                     - { property: 'price' }
                     - { property: 'description'}
                     - { property: 'enabled'}
