@@ -7,7 +7,7 @@ easy_admin:
                     - { property: 'category', type: 'easyadmin_autocomplete', type_options: { class: 'Mcc\DataSourceBundle\Entity\Category' } }
                     - { property: 'name'}
                     - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
-                    - { property: 'description'}
+                    - { property: 'description', type: 'ckeditor'}
                     - { property: 'enabled'}
                     - { property: 'imageFile', type: 'vich_file' }
             # ...

@@ -11,3 +11,8 @@
     https://symfony.com/doc/current/bundles/EasyAdminBundle/integration/vichuploaderbundle.html
     https://github.com/dustin10/VichUploaderBundle/blob/master/Resources/doc/index.md
     https://github.com/dustin10/VichUploaderBundle/blob/master/Resources/doc/usage.md
+6. install IvoryCKEditorBundle
+    https://symfony.com/doc/current/bundles/EasyAdminBundle/integration/ivoryckeditorbundle.html
+    php bin/console ckeditor:install
+    php bin/console assets:install --symlink
+    

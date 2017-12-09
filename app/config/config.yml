@@ -98,3 +98,19 @@ vich_uploader:
         product_images:
             uri_prefix:         '%app.path.product_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/images/products'
+
+ivory_ck_editor:
+    input_sync: true
+    default_config: base_config
+    configs:
+        base_config:
+            toolbar:
+                - { name: "styles", items: ['Bold', 'Italic', 'BulletedList', 'Link'] }
+    configs:
+        simple_config:
+            toolbar:
+                # ...
+        advanced_config:
+            toolbar:
+                - { name: "styles", items: ['Bold', 'Italic', 'BulletedList', 'Link'] }
+                # ...
